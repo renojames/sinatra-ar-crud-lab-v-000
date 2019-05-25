@@ -15,4 +15,8 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
+  post '/articles' do
+    binding.pry
+  end
+
 end
