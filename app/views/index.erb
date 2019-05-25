@@ -5,6 +5,12 @@
     <title></title>
   </head>
   <body>
-    <p>This is working</p>
+
+    <% @articles.each_with_index do |article, i| %>
+    <h3>Article # <%= i + 1 %></h3>
+    <h4>Title: <%= article.title %></h4>
+    <p><%= article.content %></p>
+    <% end %>
+
   </body>
 </html>
