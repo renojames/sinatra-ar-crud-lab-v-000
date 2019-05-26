@@ -10,7 +10,7 @@
     <h2>Title: <%=@article.title %></h2>
     <p><%= @article.content %></p>
 
-    <form action="/articles/<%= @art_id %>}" method="post">
+    <form action="/articles/<%= @art_id %>" method="post">
     <input id="hidden" type="hidden" name="_method" value="PATCH">
     <h2>Edit an Article</h2>
     <p>Title: </p>

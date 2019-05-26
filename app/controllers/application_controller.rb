@@ -20,15 +20,16 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  get '/articles/:id' do
-    @article = Article.find(params[:id])
-    erb :show
-  end
-
   get '/articles/:id/edit' do
     @article = Article.find(params[:id])
     @art_id = params[:id]
+    #binding.pry
     erb :edit
+  end
+
+  get '/articles/:id' do
+    @article = Article.find(params[:id])
+    erb :show
   end
 
   patch '/articles/:id' do
