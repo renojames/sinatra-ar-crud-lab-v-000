@@ -5,7 +5,12 @@
     <title>Edit A Post</title>
   </head>
   <body>
-    <form action='/articles/<%= @art_id %>}' method="post">
+
+    <h3>Your Current Article</h3>
+    <h2>Title: <%=@article.title %></h2>
+    <p><%= @article.content %></p>
+
+    <form action="/articles/<%= @art_id %>}" method="post">
     <input id="hidden" type="hidden" name="_method" value="PATCH">
     <h2>Edit an Article</h2>
     <p>Title: </p>
@@ -13,7 +18,7 @@
     <p>Content: </p>
     <input type="text" id="content" name="content">
     <br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="submit">
     </form>
   </body>
 </html>
